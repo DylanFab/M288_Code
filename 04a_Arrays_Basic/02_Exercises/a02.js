@@ -9,9 +9,9 @@ let tictactoe = [
     ['x','o','x'],
 ];
 //Print all elements of the matrix
-//??
+console.log(tictactoe);
 //Print element in the first row and first column of the matrix
-//??
+console.log(tictactoe[0][0]);
 //Print element in the 2nd row and 3rd column of the matrix
-//??
+console.log(tictactoe[1][2]);
 
