@@ -10,31 +10,30 @@ In the next step: expand the existing example with a birthday edition
 
 let person2 = {
     //first name
-//??
+firstName: "Dylan",
     //last name
-//??
+lastName: "Fabozzo",    
     //gender
-//??
+gender: "male",
     //birthday
-//??
+birthday: new Date("2006-11-23"),
 
     /**
      * method get full name
      * @returns {string}
      */
-//??
+getFullName(){
+    return `${this.firstName} ${this.lastName}.`
+},
 //??
 //??
     /**
      * method get birthday
      * @returns {string}
      */
-//??
-//??
-//??
-//??
-//??
-//??
+getBirthday(){
+    return `${this.birthday.toLocaleDateString('de-CH')}`;
+}
 }
 /*
 Sample output
@@ -43,7 +42,7 @@ weiblich
 Der Name ist Anna Muster.
 Geburtstag am 1. March 2002
  */
-//??
-//??
-//??
-//??
+console.log(`Gender ${person2.gender}`);
+console.log(`My name is ${person2.getFullName()}`);
+console.log(`Birthday ${person2.birthday}`);
+console.log(`Birthday ${person2.getBirthday()}`);
