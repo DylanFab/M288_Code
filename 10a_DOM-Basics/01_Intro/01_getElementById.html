@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Schnittstellen</title>
+</head>
+<body>
+  <h1>Die DOM Schnittstelle</h1>
+  <p id="msg">Der Absatztext</p>
+  <script>
+   let text = document.getElementById("msg").innerHTML;
+    text += " " + "wurde erweitert!";
+    document.getElementById("msg").innerHTML = text;
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Schnittstellen</title>
+</head>
+<body>
+<article id="lead">
+    <h1>Die DOM Schnittstelle</h1>
+    <p>Erster Absatztext im Artikel</p>
+    <p>Zweiter Absatztext im Artikel</p>
+</article>
+<p>Erster Absatztext außerhalb des Artikels</p>
+<p>Zweiter Absatztext außerhalb des Artikels</p>
+
+<h4>Test:</h4>
+<input type="submit" value="Zähle Absätze"
+       onclick="countParagraph()">&nbsp;
+<input type="submit" value="Zeige Inhalt Artikel"
+       onclick="showArticleContent()">&nbsp;
+
+<p id="result"></p>
+
+<script>
+    function countParagraph() {
+        let absatz = document.getElementsByTagName("p");
+        if (absatz !=null) {
+            let text = absatz.length + " p-Elemente im Dokument gefunden!";
+            document.getElementById("result").innerHTML = text;
+        }
+    }
+
+    function showArticleContent() {
+        let text = "<br>"; //Start mit einem break für die Text-Ausgabe
+        let artikel = document.getElementById("lead");
+        if(artikel !=null) {
+            let inhalt = artikel.querySelectorAll('h1,p');
+            if(inhalt !=null) {
+                for (let zaehler = 0; zaehler < inhalt.length; zaehler++) {
+                    //Absätze in text-Variable konkatenieren
+                    text += inhalt[zaehler].innerHTML + '<br>';
+                }
+                document.getElementById("result").innerHTML = text;
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

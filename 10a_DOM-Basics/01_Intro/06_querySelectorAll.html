@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>querySelectorAll()</title>
+</head>
+<body>
+    <article>
+        <h2>Überschrift 1</h2>
+        <p class="one">Der 1. Absatztext</p>
+    </article>
+    <article>
+        <h2>Überschrift 2</h2>
+        <p class="two">Der 2. Absatztext</p>
+    </article>
+    <article>
+        <h2>Überschrift 3</h2>
+        <p class="three">Der 3. Absatztext</p>
+    </article>
+    <article>
+        <h2>Überschrift 4</h2>
+        <p class="two">Der 4. Absatztext</p>
+    </article>
+
+    <h2>Überschrift 5</h2>
+    <p class="two">Der 5. Absatztext</p>
+
+    <script>
+        let elem = document.querySelectorAll("article > p.two");
+        for (let i = 0; i < elem.length; i++) {
+            elem[i].style.backgroundColor = "red";
+        }
+    </script>
+
+</body>
+</html>

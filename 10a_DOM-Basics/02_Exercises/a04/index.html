@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML ändern</title>
+    <!-- include javascript -->
+<!--??-->
+<!--??-->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body onload="init()">
+<h1>Mountainbikes on stock</h1>
+<div id="daten">
+    <div id="productinformation">
+        <div>
+            <h2 id="label">-</h2>
+            <h3 id="price">-</h3>
+            <label for="sizeSelection">Size:</label><select name="size" id="sizeSelection"></select>
+            <label for="colorSelection">Color: </label><select name="color" id="colorSelection"></select>
+        </div>
+        <div>
+            <input type="image" src="img/previous.png" style="padding-bottom:3px;" onclick="backward();"/>
+            <input type="image" src="img/zoom-out.png" onclick="zoomout();"/>
+            <input type="image" src="img/zoom-in.png" onclick="zoomin();"/>
+            <input type="image" src="img/next.png" style="padding-bottom:3px" onclick="forward();"/>
+        </div>
+    </div>
+</div>
+<!-- Buttons -->
+<div id="carousel">
+    <p><img id="pic" src="img/bild01.png"></p>
+</div>
+<div style="margin-left: 1.2rem; margin-top: 1rem; horiz-align: center;">
+    <button onclick="addCart()">Add to Cart
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="16" height="16" fill="currentColor"
+             viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+    </button>
+</div>
+<div id="productlist">
+    <h2>Your Cart:</h2>
+</div>
+<div id="totalcontainer">
+    <h3 id="totallabel">
+        Total:
+    </h3>
+    <h3 id="totalcost">
+    </h3>
+    <button style="float: right" onclick="checkOut();" value="checkout">
+        <img alt="checkout" src="img/checkout.svg"/>
+        <br>Checkout
+    </button>
+</div>
+</body>
+</html>

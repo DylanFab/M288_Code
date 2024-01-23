@@ -1,0 +1,48 @@
+<!--
+Das Beispiel überprüft mit if-Anweisung, ob das Element mit der id="msg" im HTML-Dokument enthalten ist.
+Trifft dies zu, wird dieses Element manipuliert, wenn nicht (else-Verzweigung) wird eine Fehlermeldung
+mit alert() ausgegeben.
+Um das Ganze besser zu demonstrieren wurden zwei Buttons mit den onclick-Ereignissen erstellt.
+Damit werden die Funktionen textErweitern() und textLoeschen() aufgerufen.
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM-Schnittstelle</title>
+</head>
+<body>
+<h2>DOM: HTML-Elemente suchen</h2>
+<p id="msg">Der Absatztext</p>
+<input type="submit" value="Text erweitern"
+       onclick="textErweitern()">&nbsp;
+<input type="submit" value="Text löschen"
+       onclick="textLoeschen()">&nbsp;
+
+<script>
+    function textErweitern() {
+        let elem = document.getElementById("msg");
+        if (elem != null) {
+            let text = elem.innerHTML;
+            text += " " + "wurde erweitert ...";
+            elem.innerHTML = text;
+        }
+        else {
+            alert("Element wurde nicht gefunden!");
+        }
+    }
+
+    function textLoeschen() {
+        let elem = document.getElementById("msg");
+        if (elem != null) {
+            elem.innerHTML = "Der Absatztext";
+        }
+        else {
+            alert("Element wurde nicht gefunden!");
+        }
+    }
+</script>
+
+</body>
+</html>

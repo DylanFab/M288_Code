@@ -1,0 +1,79 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML ändern</title>
+</head>
+<body>
+<h1>HTML Style ändern</h1>
+<p>Farbe ändern:
+    <button onclick='changeColor("headline","grey")'>grau</button>
+    <button onclick='changeColor("headline","red")'>red</button>
+    <button onclick='changeColor("headline","blue")'>blue</button>
+</p>
+<p>Font-Dicke ändern:
+    <button onclick='changeStyle("headline","bold")'>bold</button>
+    <button onclick='changeStyle("headline","normal")'>normal</button>
+</p>
+
+<p>Font-Grösse ändern:
+    <button onclick='changeSize("headline","+")'>+</button>
+    <button onclick='changeSize("headline","-")'>-</button>
+    <label for="outFont">Actual font-size</label>
+    <input type="text" id="outFont" size="5px" readonly>
+</p>
+
+<p id="headline">HTML Style ändern</p>
+
+
+<script>
+    //HOISTING - Invoking (calling) a function before it has been defined.
+    initChangeSize("headline");
+
+    function getActualFontSize(elem) {
+        let el = document.getElementById(elem);
+        let style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+        return {"element": el, "fontSize": parseFloat(style)}
+    }
+
+    function initChangeSize(elem){
+        let myObj = getActualFontSize(elem);
+        let outFont = document.getElementById('outFont');
+        outFont.value = myObj.fontSize.toString();
+    }
+
+    /**
+     * Ändrung der Farbe
+     * @param elem
+     * @param color
+     */
+    function changeColor(elem, color) {
+        document.getElementById(elem).style.color = color;
+    }
+
+    /**
+     * Änderung des Schriftdicke
+     * @param elem
+     * @param style
+     */
+    function changeStyle(elem, style) {
+        document.getElementById(elem).style.fontWeight = style;
+    }
+
+    /**
+     * Änderung der Schriftgrösse
+     * @param elem
+     * @param size
+     */
+    function changeSize(elem, size) {
+        let myObj = getActualFontSize(elem);
+        if (size == "+") {
+            myObj.element.style.fontSize = (myObj.fontSize + 1) + 'px';
+        } else if (size == "-") {
+            myObj.element.style.fontSize = (myObj.fontSize - 1) + 'px';
+        }
+        document.getElementById('outFont').value = myObj.fontSize.toString();
+    }
+</script>
+
+</body>
+</html>

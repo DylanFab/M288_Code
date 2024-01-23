@@ -1,0 +1,92 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    font-family: Arial;
+    background: #252525;
+    color: white;
+}
+h1 {
+    font-size: 2em;
+}
+#carousel{
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#carousel p{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 10px 0;
+}
+#carousel img{
+    width: 60%;
+}
+input{
+    color: white;
+    border: none;
+    background-color: white;
+    font-size: 0.5em;
+/*    font-weight: bold;*/
+    margin: 0 5px 0 5px;
+    padding: 5px;
+}
+input:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    background: #575757;
+}
+#daten{
+    grid-column: 3 / span 4;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 1.3em;
+}
+#daten :last-child{
+    justify-content: flex-end;
+}
+select{
+    color: white;
+    border: none;
+    background: #3f3f3f;
+    font-size: 1em;
+    /*    font-weight: bold;*/
+    padding: 5px;
+}
+#daten button{
+    padding: auto;
+    margin: 5px 0 0 0;
+    width: auto;
+    align-self: flex-start;
+    justify-self: flex-end;
+    font-size: 1em;
+}
+#productlist{
+    grid-column: 1 /span 6;
+    margin: 20px 0 0 0;
+    border-top: #575757 1px solid;
+}
+#productlist div{
+    display: flex;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#productlist div p{
+    grid-column: span 2;
+}
+#totalcontainer{
+    grid-column: 1 / span 11;
+    border-top: #575757 1px solid;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+}
+#totallabel{
+    grid-column: 1 / span 2;
+}
+#totalcost{
+    grid-column: 8 / span 2;
+}

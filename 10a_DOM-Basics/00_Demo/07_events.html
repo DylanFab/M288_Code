@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML ändern</title>
+</head>
+<h1>HTML Style ändern</h1>
+<p>Farbe ändern:
+    <button onclick='changeColor("headline","grey")'>grau</button>
+    <button onclick='changeColor("headline","red")'>red</button>
+    <button onclick='changeColor("headline","blue")'>blue</button>
+</p>
+<p>Font-Dicke ändern:
+    <button onclick='changeStyle("headline","bold")'>bold</button>
+    <button onclick='changeStyle("headline","normal")'>normal</button>
+</p>
+
+<p>Font-Grösse ändern:
+    <button onclick='changeSize("headline","+")'>+</button>
+    <button onclick='changeSize("headline","-")'>-</button>
+    <label for="outFont">Actual font-size</label>
+    <input type="text" id="outFont" size="5px" readonly>
+</p>
+
+<p id="headline">HTML Style ändern</p>
+
+
+<body>
+<script>
+
+</script>
+</body>
+</html>
