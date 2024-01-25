@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML ändern</title>
+    <!-- include javascript -->
+    <script src="js/data.js"></script><!--??-->
+    <script defer src="js/script.js"></script><!--??-->
+</head>
+<body onload="init()">
+<h1>Mountainbikes on stock</h1>
+
+<h2 id="label">-</h2><!--??-->
+<h3 id="price">-</h3><!--??-->
+<div>
+    <img id="pic" src="img/bild01.png" width="300"><!--??-->
+</div>
+<!-- Buttons -->
+<div style="horiz-align: center;">
+    <input type="image" src="img/previous.png" style="padding-bottom:3px" onclick="backward();"/><!--??-->
+    <input type="image" src="img/zoom-in.png" onclick="zoomin();"/><!--??-->
+    <input type="image" src="img/zoom-out.png" onclick="zoomout();"/><!--??-->
+    <input type="image" src="img/next.png" style="padding-bottom:3px" onclick="forward();"/><!--??-->
+</div>
+</body>
+</html>
